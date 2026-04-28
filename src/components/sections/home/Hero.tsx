@@ -1,6 +1,7 @@
 // src/sections/home/Hero.tsx
 import { Link } from 'react-router-dom';
 import Button from '../../ui/Button';
+import logo from '../../../assets/careonelogo.png';
 
 
 const Hero = () => {
@@ -30,7 +31,7 @@ const Hero = () => {
 
         <div className="hero-image-wrapper">
           <img
-            src="https://via.placeholder.com/560x360"
+            src={logo}
             alt="Healthcare professionals in a modern hospital"
             className="hero-image"
           />
