@@ -1,5 +1,6 @@
 import SectionHeader from '../components/ui/SectionHeader';
 import Card from '../components/ui/Card';
+import corridor from '../assets/corrido.webp';
 
 const About = () => {
   return (
@@ -26,7 +27,7 @@ const About = () => {
 
           <div className="about-image-wrapper">
             <img
-              src="https://via.placeholder.com/560x360"
+              src={corridor}
               alt="Hospital corridor"
               className="about-image"
             />

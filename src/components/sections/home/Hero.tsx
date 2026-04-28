@@ -1,7 +1,7 @@
 // src/sections/home/Hero.tsx
 import { Link } from 'react-router-dom';
 import Button from '../../ui/Button';
-import logo from '../../../assets/careonelogo.webp';
+import logo from '../../../assets/careonelogo_converted.webp';
 
 
 const Hero = () => {
