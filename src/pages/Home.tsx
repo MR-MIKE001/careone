@@ -26,12 +26,9 @@ const Home = () => {
                 <Button>View services</Button>
               </Link>
               <a href={offer} download>
-                <Button variant="secondary">Contact us</Button>
+                <Button variant="secondary">Download Offer</Button>
               </a>
             </div>
-        
-
-
             {/* Small stats row */}
             <div className="mt-4 flex flex-wrap gap-5 text-xs text-slate-600">
               <div className="flex items-center gap-2">
