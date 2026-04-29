@@ -9,7 +9,7 @@ const About = () => {
         <SectionHeader
           eyebrow="About"
           title="CareOne Services Ltd."
-          subtitle="We partner with hospitals and clinics to design, equip and operate safe, efficient and patient-centered facilities."
+          subtitle="CareOne Services Ltd is a diversified service company committed to delivering innovative solutions across healthcare, technology, consulting, and investment sectors."
           align="center"
         />
 
@@ -17,11 +17,7 @@ const About = () => {
           <div>
             <h3 className="about-heading">Who we are</h3>
             <p className="body-text">
-              CareOne Services Ltd. is a healthcare-focused company providing
-              hospital equipment, management consulting, specialized training,
-              marketing promotion, importation and general contracting
-              services. We bring together technical, clinical and business
-              expertise to support modern healthcare providers.
+              CareOne Services Ltd is a multi-sector company delivering high-quality services in healthcare, digital solutions, consulting, and investment opportunities. We combine innovation with professionalism to provide reliable and impactful solutions.
             </p>
           </div>
 
@@ -38,26 +34,23 @@ const About = () => {
           <Card>
             <h3 className="about-card-title">Mission</h3>
             <p className="body-text">
-              To empower healthcare providers with reliable equipment, expert
-              guidance and practical training that enhance patient safety and
-              operational performance.
+              To deliver high-quality and dependable services that improve lives and support business growth.
             </p>
           </Card>
           <Card>
             <h3 className="about-card-title">Vision</h3>
             <p className="body-text">
-              To be a trusted partner to hospitals and clinics across the
-              region, known for integrated solutions and long-term
-              relationships.
+              To become a leading multi-service company recognized for excellence and integrity.
             </p>
           </Card>
           <Card>
             <h3 className="about-card-title">Values</h3>
             <ul className="about-values">
-              <li>Integrity in every engagement</li>
-              <li>Reliability and consistency</li>
-              <li>Professionalism and expertise</li>
-              <li>Patient-centered thinking</li>
+              <li>Integrity</li>
+              <li>Professionalism</li>
+              <li>Innovation</li>
+              <li>Excellence</li>
+              <li>Customer Satisfaction</li>
             </ul>
           </Card>
         </div>

@@ -14,9 +14,7 @@ const SectionHeader = ({
 }: SectionHeaderProps) => {
   return (
     <div
-      className={`section-header ${
-        align === 'center' ? 'section-header-center' : ''
-      }`}
+      className={`mb-6 max-w-2xl ${align === 'center' ? 'mx-auto text-center' : ''}`}
     >
       {eyebrow && <p className="section-eyebrow">{eyebrow}</p>}
       <h2 className="section-title">{title}</h2>

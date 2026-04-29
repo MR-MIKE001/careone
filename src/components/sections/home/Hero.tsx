@@ -2,6 +2,7 @@
 import { Link } from 'react-router-dom';
 import Button from '../../ui/Button';
 import logo from '../../../assets/careonelogo_converted.webp';
+import offer from '../../../assets/careOneOffer.jpeg';
 
 
 const Hero = () => {
@@ -11,18 +12,16 @@ const Hero = () => {
         <div className="hero-content">
           <p className="hero-eyebrow">CareOne Services Ltd.</p>
           <h1 className="hero-title">
-            Integrated hospital solutions for safer, smarter care.
+           Integrated Healthcare, Digital & Investment Solutions
           </h1>
           <p className="hero-subtitle">
-            We support hospitals and clinics with trusted equipment, management
-            consulting, specialized training, marketing promotion, importation,
-            and general contracting.
+            Delivering innovation, reliability, and professional excellence across healthcare, technology, and business services.
           </p>
 
           <div className="hero-actions">
-            <Link to="/contact">
-              <Button>Schedule a consultation</Button>
-            </Link>
+            <a href={offer} download>
+              <Button>Download Offer</Button>
+            </a>
             <Link to="/services" className="hero-secondary-link">
               View all services
             </Link>

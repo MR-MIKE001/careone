@@ -1,110 +1,91 @@
 import SectionHeader from '../components/ui/SectionHeader';
-import Card from '../components/ui/Card';
 
 const services = [
   {
+    title: 'Digital Solutions',
+    description:
+      'IT support, digital transformation, and online business services to help organisations operate efficiently in a connected world.',
+  },
+  {
+    title: 'Emergency Care Services',
+    description:
+      'Rapid response, first aid, and medical support coordination designed to improve outcomes in critical situations.',
+  },
+  {
     title: 'Hospital Equipment',
     description:
-      'We help you select, source and maintain equipment that supports safe, effective clinical care.',
-    bullets: [
-      'Diagnostic and monitoring equipment',
-      'Theatre and critical care equipment',
-      'Installation, calibration and maintenance coordination',
-    ],
+      'Supply, installation, and maintenance of medical equipment tailored to the needs of healthcare facilities.',
   },
   {
-    title: 'Hospital Management Consultants',
+    title: 'Hospital Consulting',
     description:
-      'Our consultants work with your leadership team to optimise operations and governance.',
-    bullets: [
-      'Operational assessments and workflow mapping',
-      'Performance and cost optimisation plans',
-      'Implementation support and change management',
-    ],
+      'Operational improvement and performance optimization for hospitals and clinics.',
   },
   {
-    title: 'Specialized Medical Care Training',
+    title: 'Medical Training',
     description:
-      'We deliver practical training programmes designed around your teams and equipment.',
-    bullets: [
-      'Equipment handling and safety',
-      'Infection prevention and control',
-      'Emergency and critical care protocols',
-    ],
+      'Professional healthcare and emergency training programs for clinical and non-clinical teams.',
   },
   {
-    title: 'Marketing Promotion',
+    title: 'Marketing & Promotion',
     description:
-      'We help communicate your services clearly to patients, referrers and partners.',
-    bullets: [
-      'Brand and message development',
-      'Digital and offline campaign planning',
-      'Patient education material support',
-    ],
+      'Brand growth and digital campaigns to help healthcare and business services reach the right audience.',
   },
   {
     title: 'Importation',
     description:
-      'We manage the complexities of importing medical equipment and supplies.',
-    bullets: [
-      'Vendor and product sourcing',
-      'Regulatory and documentation support',
-      'Logistics coordination to your facility',
-    ],
+      'Sourcing and delivery of goods and equipment with attention to quality and compliance.',
   },
   {
-    title: 'General Contractor',
+    title: 'General Contracting',
     description:
-      'We coordinate projects that support your facility infrastructure and upgrades.',
-    bullets: [
-      'Facility build-outs and renovations',
-      'Project planning and coordination',
-      'Vendor and contractor management',
-    ],
+      'Project execution and procurement services that support infrastructure and operations.',
+  },
+  {
+    title: 'Investment Program',
+    description:
+      'Structured and professionally managed investment plans, including 6-month and 12-month options.',
   },
 ];
 
 const Services = () => {
   return (
-    <section className="section">
-      <div className="container">
+    <section className="py-10">
+      <div className="mx-auto max-w-6xl px-4">
         <SectionHeader
           eyebrow="Services"
-          title="Specialised support for healthcare providers"
-          subtitle="Choose a single service or combine multiple offerings for an integrated solution."
+          title="Comprehensive services for healthcare, technology and investment"
+          subtitle="Our services are designed to work together or independently, depending on your needs."
           align="center"
         />
 
-        <div className="services-list">
-          {services.map((service, index) => (
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {services.map((service) => (
             <div
               key={service.title}
-              className={`service-detail ${
-                index % 2 === 1 ? 'service-detail-alt' : ''
-              }`}
+              className="flex flex-col rounded-xl border border-slate-200 bg-white p-4 text-sm shadow-sm"
             >
-              <div className="service-detail-content">
-                <h3 className="service-detail-title">{service.title}</h3>
-                <p className="service-detail-description">
-                  {service.description}
-                </p>
-                <ul className="service-detail-bullets">
-                  {service.bullets.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-              <Card>
-                <p className="service-detail-cta">
-                  Ready to explore {service.title.toLowerCase()} for your
-                  facility?
-                </p>
-                <a href="/contact" className="service-detail-cta-link">
-                  Talk to our team →
-                </a>
-              </Card>
+              <h3 className="mb-1 text-sm font-semibold text-slate-900">
+                {service.title}
+              </h3>
+              <p className="text-xs text-slate-600">{service.description}</p>
             </div>
           ))}
+        </div>
+
+        {/* Investment plans callout */}
+        <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-5">
+          <h3 className="text-sm font-semibold text-slate-900">
+            Investment Program Plans
+          </h3>
+          <p className="mt-2 text-sm text-slate-700">
+            CareOne Services Ltd offers structured and professionally managed
+            investment plans:
+          </p>
+          <ul className="mt-2 ml-4 list-disc text-sm text-slate-700">
+            <li>6 Months — 15% Return</li>
+            <li>12 Months — 30% Return</li>
+          </ul>
         </div>
       </div>
     </section>

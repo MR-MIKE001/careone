@@ -8,13 +8,11 @@ import SelectInput from '../components/ui/SelectInput';
 import TextArea from '../components/ui/TextArea';
 import Button from '../components/ui/Button';
 
-
 const Contact = () => {
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  // Ref to the HTMLFormElement for sendForm
   const formRef = useRef<HTMLFormElement | null>(null);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -33,11 +31,13 @@ const Contact = () => {
       await emailjs.sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-         formRef.current,
-          {
+        formRef.current,
+        {
           publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-        });
-        console.log('Email sent successfully');
+        }
+      );
+
+      console.log('Email sent successfully');
       setSubmitted(true);
       formRef.current.reset();
     } catch (err) {
@@ -49,107 +49,130 @@ const Contact = () => {
   };
 
   return (
-    <section className="section section-muted">
-      <div className="container">
+    <section className="bg-slate-50 py-10">
+      <div className="mx-auto max-w-6xl px-4">
         <SectionHeader
-          eyebrow="Contact"
-          title="Let’s discuss your requirements"
-          subtitle="Share a few details about your facility and the services you’re interested in. Our team will get back to you promptly."
+          eyebrow="Contact Us"
+          title="Let’s discuss your needs"
+          subtitle="Share a few details about your requirements. Our team will respond within business hours."
         />
 
-        <div className="contact-layout">
+        <div className="grid gap-6 md:grid-cols-[1.6fr,1.1fr]">
+          {/* Form */}
           <form
-            className="contact-form"
-            onSubmit={handleSubmit}
             ref={formRef}
+            onSubmit={handleSubmit}
+            className="space-y-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
           >
-            <div className="contact-grid">
+            <div className="grid gap-4 md:grid-cols-2">
               <TextInput
                 label="Full name"
-                name="fullName"          
-                placeholder="Dr. Jane Doe"
+                name="fullName"
+                placeholder="Your name"
                 required
               />
               <TextInput
                 label="Email"
-                name="email"            
+                name="email"
                 type="email"
                 placeholder="you@example.com"
                 required
               />
               <TextInput
                 label="Phone"
-                name="phone"            
-                placeholder="+234 ..."
+                name="phone"
+                placeholder="0904..."
               />
               <TextInput
-                label="Organization / Hospital"
-                name="organization"     
-                placeholder="Your facility name"
+                label="Organization / Business"
+                name="organization"
+                placeholder="Your organisation"
               />
             </div>
 
             <SelectInput
               label="Service of interest"
-              name="serviceOfInterest"   
-              required
+              name="serviceOfInterest"
               defaultValue=""
+              required
             >
               <option value="" disabled>
                 Select a service
               </option>
+              <option>Digital Solutions</option>
+              <option>Emergency Care Services</option>
               <option>Hospital Equipment</option>
-              <option>Hospital Management Consultants</option>
-              <option>Specialized Medical Care Training</option>
-              <option>Marketing Promotion</option>
+              <option>Hospital Management Consulting</option>
+              <option>Medical Training</option>
+              <option>Marketing & Promotion</option>
               <option>Importation</option>
-              <option>General Contractor</option>
+              <option>General Contracting</option>
+              <option>Investment Program</option>
               <option>Other</option>
             </SelectInput>
 
             <TextArea
               label="Message"
-              name="message"           
+              name="message"
               placeholder="Share a brief description of your needs, timelines and any questions."
               required
               rows={5}
             />
 
-            <div className="contact-actions">
+            <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
               <Button type="submit" disabled={submitting}>
                 {submitting ? 'Sending...' : 'Send message'}
               </Button>
+
               {submitted && (
-                <p className="contact-success">
+                <p className="text-xs text-emerald-600">
                   Thank you. Your message has been sent.
                 </p>
               )}
+
               {error && (
-                <p className="contact-error">
+                <p className="text-xs text-red-600">
                   {error}
                 </p>
               )}
             </div>
           </form>
 
-          <div className="contact-info">
-            <div className="contact-info-card">
-              <h3 className="contact-info-title">Contact details</h3>
-              <p className="body-text">
-                Email: <strong>info@careoneservices.com</strong>
-              </p>
-              <p className="body-text">
-                Phone: <strong>+234 000 000 0000</strong>
-              </p>
-              <p className="body-text">
-                Location: <strong>Lagos, Nigeria</strong>
+          {/* Contact info panel */}
+          <div className="space-y-4">
+            <div className="rounded-2xl border border-slate-200 bg-white p-4 text-sm shadow-sm">
+              <h3 className="mb-1 text-sm font-semibold text-slate-900">
+                Address
+              </h3>
+              <p className="text-slate-700">
+                Plot 500 East West Road,
+                <br />
+                Beside Lockdown Bar,
+                <br />
+                Port Harcourt, Nigeria
               </p>
             </div>
 
-            <div className="contact-info-card">
-              <h3 className="contact-info-title">Office hours</h3>
-              <p className="body-text">Monday – Friday, 9:00am – 5:00pm</p>
-              <p className="body-text">Weekends by appointment</p>
+            <div className="rounded-2xl border border-slate-200 bg-white p-4 text-sm shadow-sm">
+              <h3 className="mb-1 text-sm font-semibold text-slate-900">
+                Contact
+              </h3>
+              <p className="text-slate-700">
+                Phone: <span className="font-medium">09049481295</span>
+              </p>
+              <p className="text-slate-700">
+                WhatsApp: <span className="font-medium">09057561432</span>
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-slate-200 bg-white p-4 text-sm shadow-sm">
+              <h3 className="mb-1 text-sm font-semibold text-slate-900">
+                Business Hours
+              </h3>
+              <p className="text-slate-700">
+                Monday – Saturday: 8:00 AM – 6:00 PM
+              </p>
+              <p className="text-slate-700">Sunday: Closed</p>
             </div>
           </div>
         </div>
