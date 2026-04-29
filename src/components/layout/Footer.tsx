@@ -34,9 +34,8 @@ const Footer = () => {
 
         <div className="footer-contact">
           <span className="footer-heading">Contact</span>
-          <p className="footer-text">Email: info@careoneservices.com</p>
-          <p className="footer-text">Phone: +234 000 000 0000</p>
-          <p className="footer-text">Lagos, Nigeria</p>
+          <p className="footer-text">Phone: <a href="tel:+2349057561432" className="footer-link">+2349057561432</a></p>
+          <p className="footer-text">Address: Plot 500 East West Road, Beside Lockdown Bar, Port Harcourt, Nigeria</p>
         </div>
       </div>
 

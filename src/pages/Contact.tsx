@@ -158,10 +158,17 @@ const Contact = () => {
                 Contact
               </h3>
               <p className="text-slate-700">
-                Phone: <span className="font-medium">09049481295</span>
+                Phone: <span className="font-medium"><a href="tel:+2349049481295" className="footer-link">+2349049481295</a></span>
               </p>
               <p className="text-slate-700">
-                WhatsApp: <span className="font-medium">09057561432</span>
+                WhatsApp: <span className="font-medium"><a
+  href="https://wa.me/2349057561432"
+  className="footer-link"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  +2349057561432
+</a></span>
               </p>
             </div>
 
