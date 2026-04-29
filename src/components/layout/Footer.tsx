@@ -34,16 +34,37 @@ const Footer = () => {
 
         <div className="footer-contact">
           <span className="footer-heading">Contact</span>
-          <p className="footer-text">Phone: <a href="tel:+2349057561432" className="footer-link">+2349057561432</a></p>
-          <p className="footer-text">Address: Plot 500 East West Road, Beside Lockdown Bar, Port Harcourt, Nigeria</p>
+          <p className="footer-text">
+            Phone:{' '}
+            <a
+              href="https://wa.me/2349057561432"
+              className="footer-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              +2349057561432
+            </a>
+          </p>
+          <p className="footer-text">
+            Address: Plot 500 East West Road, Beside Lockdown Bar, Port Harcourt, Nigeria
+          </p>
         </div>
       </div>
 
       <div className="footer-bottom">
         <div className="container footer-bottom-inner">
           <span className="footer-bottom-text">
-            © {new Date().getFullYear()} CareOne Services Ltd. All rights
-            reserved.
+            © {new Date().getFullYear()} CareOne Services Ltd. All rights reserved.{' '}
+            Developed &amp; managed by{' '}
+            <a
+              href="https://swaddigital.com"
+              className="footer-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              SWAD Digital Solutions Ltd
+            </a>
+            .
           </span>
         </div>
       </div>

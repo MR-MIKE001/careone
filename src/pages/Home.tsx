@@ -34,7 +34,7 @@ const Home = () => {
           <div className="w-full max-w-md rounded-2xl border border-slate-200 bg-white/70 p-4 shadow-sm">
             <img
               src={logo}
-              alt="CareOne Services Ltd Offer"
+              alt="CareOne Services Ltd"
               className="h-auto w-full rounded-lg object-cover"
             />
           </div>
@@ -75,6 +75,99 @@ const Home = () => {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Channel Partner Section */}
+      <section className="bg-slate-50 py-10">
+        <div className="mx-auto max-w-6xl px-4">
+          <SectionHeader
+            eyebrow="Channel Partner"
+            title="Official Regional Channel Partner of SWAD Digital Solutions Ltd."
+            subtitle="We are authorized to represent SWAD Digital Solutions Ltd across a range of powerful digital solutions for modern businesses."
+            align="center"
+          />
+
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <div className="rounded-xl border border-slate-200 bg-white p-4 text-sm shadow-sm">
+              <h3 className="mb-1 text-sm font-semibold text-slate-900">HotelGo</h3>
+              <p className="text-xs text-slate-600">
+                Hotel PMS solution helping hotel owners manage their business effectively,
+                reduce theft, increase profitability, and grow.
+              </p>
+            </div>
+
+            <div className="rounded-xl border border-slate-200 bg-white p-4 text-sm shadow-sm">
+              <h3 className="mb-1 text-sm font-semibold text-slate-900">SWAD Cloud</h3>
+              <p className="text-xs text-slate-600">
+                Cloud hosting and digital tools marketplace that brings businesses online
+                and connects them to the world.
+              </p>
+            </div>
+
+            <div className="rounded-xl border border-slate-200 bg-white p-4 text-sm shadow-sm">
+              <h3 className="mb-1 text-sm font-semibold text-slate-900">Aria Messenger</h3>
+              <p className="text-xs text-slate-600">
+                Marketing solution for businesses to send and manage campaigns across email,
+                SMS, WhatsApp, and push notifications.
+              </p>
+            </div>
+
+            <div className="rounded-xl border border-slate-200 bg-white p-4 text-sm shadow-sm">
+              <h3 className="mb-1 text-sm font-semibold text-slate-900">NetCaller</h3>
+              <p className="text-xs text-slate-600">
+                Mobile‑first cloud communication system that enables businesses to operate
+                a professional phone and messaging infrastructure without owning telecom hardware.
+              </p>
+            </div>
+
+            <div className="rounded-xl border border-slate-200 bg-white p-4 text-sm shadow-sm">
+              <h3 className="mb-1 text-sm font-semibold text-slate-900">
+                Custom Product Development
+              </h3>
+              <p className="text-xs text-slate-600">
+                Designing and developing bespoke digital solutions tailored to your business needs.
+              </p>
+            </div>
+
+            <div className="rounded-xl border border-slate-200 bg-white p-4 text-sm shadow-sm">
+              <h3 className="mb-1 text-sm font-semibold text-slate-900">Managed IT Services</h3>
+              <p className="text-xs text-slate-600">
+                Full IT management so your business can focus on its core operations.
+              </p>
+            </div>
+
+            <div className="rounded-xl border border-slate-200 bg-white p-4 text-sm shadow-sm md:col-span-2 lg:col-span-3">
+              <h3 className="mb-1 text-sm font-semibold text-slate-900">Cybersecurity</h3>
+              <p className="text-xs text-slate-600">
+                End‑to‑end digital security, from device management to disaster recovery,
+                identity management to access control.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-6 flex flex-col items-center gap-3 text-center text-sm">
+            <p className="max-w-2xl text-slate-700">
+              If you&apos;re interested in any of these solutions, talk to us now.
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              <a
+                href="https://www.swaddigitalsolutions.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-care-primary underline underline-offset-2"
+              >
+                Learn more about SWAD Digital Solutions Ltd
+              </a>
+              <a
+                href="https://wa.me/+2348066673312"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button>Talk to us on WhatsApp</Button>
+              </a>
+            </div>
           </div>
         </div>
       </section>
